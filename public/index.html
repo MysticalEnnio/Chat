@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/socket.io.min.js"></script>
+  <script src="js/index.js"></script>
+  <title>Myco</title>
+</head>
+
+<body>
+  <div id="headingWrapper">
+    <h1 id="heading">Myco</h1>
+  </div>
+  <div id="mainWrapper">
+    <div id="messageWrapper"></div>
+  </div>
+  <div id="footerWrapper">
+    <div id="newMessageWrapper">
+      <div class="profilePictureWrapper">
+        <img src="https://ik.imagekit.io/mystical/Default_Pb_vXykZsFHE.png" alt="profile picture"
+          class="profilePicture">
+      </div>
+      <div class="seperater"></div>
+      <input type="text" id="newMessageInput">
+      <div class="seperater"></div>
+      <button id="messageSubmit">Send</button>
+    </div>
+  </div>
+  <template data-message-template>
+    <div class="message">
+      <div class="profilePictureWrapper">
+        <img src="https://ik.imagekit.io/mystical/Default_Pb_vXykZsFHE.png" alt="profile picture" class="profilePicture"
+          data-profile-picture>
+      </div>
+      <div class="seperater"></div>
+      <div class="messageContentWrapper">
+        <div class="messageHeader">
+          <div class="username" data-username>Username</div>
+          <div class="seperater"></div>
+          <div class="time" data-time>Time</div>
+        </div>
+        <div class="messageBody">
+          <p class="messageText" data-message>Message</p>
+        </div>
+      </div>
+    </div>
+  </template>
+</body>
+
+</html>
